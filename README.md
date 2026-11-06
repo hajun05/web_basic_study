@@ -1,38 +1,42 @@
 # web_basic_study
 
-웹 개발을 처음 배우면서 차근차근 따라 해 보는 연습장입니다.
+웹 개발 기초를 학습하며 작성한 코드와 예제를 모아 두는 저장소입니다.
 
-지금은 [생활코딩](https://opentutorials.org)의 Next.js 강의를 보면서, 직접 코드를 쳐 보고 막히는 부분을 정리하고 있어요. 완성된 서비스보다는 "배운 걸 손으로 해 보는 공간"에 가깝습니다.
+강의, 문서, 문제 풀이 등 출처에 구애받지 않고 학습한 내용을 자유롭게 정리합니다. 완성된 서비스보다는 개념을 직접 구현해 보는 데 목적이 있습니다.
 
-## 지금까지 해 본 것
+## 기술 스택
 
-- Next.js 프로젝트 만들기 ([`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app))
-- 페이지와 공통 레이아웃 만들기
-- 주소의 값으로 페이지 바꾸기 (`/test/read/1`, `/test/read/2`)
-- 글 생성 화면 만들기 (`/test/create`)
+- [Next.js](https://nextjs.org) (App Router)
+- React
+- TypeScript
 
-차례대로 늘려 갈 예정이라, 아직 빠진 부분과 어설픈 코드가 많습니다.
+## 학습 내용
 
-## 배우다 막혔던 것
+`app/test` 폴더에서 다루며, 주제는 계속 추가됩니다.
 
-- 강의는 JS인데 이 프로젝트는 TypeScript(`.tsx`)로 만들어져서 처음엔 헷갈렸어요.
-- 강의 때와 버전이 달라, 동적 주소의 `params`는 이제 Promise라서 `await`로 꺼내야 합니다. 안 그러면 화면에 값이 안 나와요.
-- 이미지를 쓸 때 `public` 폴더 파일은 `/next.svg`처럼 `/`부터 적어야 합니다.
+| 주제 | 경로 |
+|---|---|
+| 공통 레이아웃과 페이지 구성 | `/test` |
+| 동적 라우팅 (주소의 값으로 페이지 구성) | `/test/read/[id]` |
+| 생성 화면 | `/test/create` |
 
-## 실행해 보기
+## 학습 메모
+
+- **동적 라우팅의 `params`:** 현재 Next.js 버전에서 `params`는 Promise이므로 `await`로 값을 꺼내야 합니다.
+- **정적 파일 경로:** `public` 폴더의 파일은 `public`을 빼고 `/`부터 적습니다. 예: `public/next.svg` → `/next.svg`
+- **JS와 TypeScript:** 자료가 JS 기준이어도 타입만 추가하면 같은 방식으로 적용할 수 있습니다. 이 저장소는 TypeScript(`.tsx`)를 사용합니다.
+
+## 실행 방법
 
 ```bash
 npm install
 npm run dev
 ```
 
-브라우저에서 [http://localhost:3000/test](http://localhost:3000/test)를 열면 됩니다.
+[http://localhost:3000/test](http://localhost:3000/test)에서 확인할 수 있습니다.
 
-코드는 `app/test` 폴더에 있고, 파일을 고치면 화면이 바로 바뀝니다.
-
-## 참고한 자료
+## 참고 자료
 
 - [Next.js 공식 문서](https://nextjs.org/docs)
-- [Learn Next.js](https://nextjs.org/learn) - 따라 하면서 배우는 공식 튜토리얼
-
-만들어 본 걸 인터넷에 올려 보고 싶다면 [Vercel](https://vercel.com/new)이 가장 쉽습니다. ([배포 문서](https://nextjs.org/docs/app/building-your-application/deploying))
+- [Learn Next.js](https://nextjs.org/learn)
+- [Next.js 배포 문서](https://nextjs.org/docs/app/building-your-application/deploying)
